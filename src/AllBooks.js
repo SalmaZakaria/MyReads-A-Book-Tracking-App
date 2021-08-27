@@ -18,16 +18,16 @@ class AllBooks extends Component {
             div className = "list-books-content" >
             <
             BookStatus Books = { currentlyReading }
-            title = { "currentlyReading" }
             ChangingStatus = { this.ChangingStatus }
+            title = { "currentlyReading" }
             /> <
             BookStatus Books = { WantToRead }
-            title = { "wantToRead" }
             ChangingStatus = { this.ChangingStatus }
+            title = { "wantToRead" }
             /> <
             BookStatus Books = { Read }
-            title = { "read" }
             ChangingStatus = { this.ChangingStatus }
+            title = { "read" }
             />  <
             /div>
         );
