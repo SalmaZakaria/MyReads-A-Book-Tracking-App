@@ -7,7 +7,7 @@ class BookStatus extends Component {
         ChangingStatus: PropTypes.func.isRequired,
     }
     render() {
-        const { Books, title, ChangingStatus } = this.props;
+        const { Books, ChangingStatus } = this.props;
         return ( <
             div >
             <
@@ -30,8 +30,9 @@ class BookStatus extends Component {
                         { width: 120, height: 180, backgroundImage: `url(${book.imageLinks.thumbnail})` } } > < /div> <
                     div className = "book-shelf-changer" >
                     <
-                    select onChange = { event => ChangingStatus(book, event.target.value) }
-                    value = { book.shelf } >
+                    select value = { book.shelf }
+                    onChange = {
+                        (event) => ChangingStatus(book, event.target.value) } >
                     <
                     option value = "move"
                     disabled > Move to... < /option> <
