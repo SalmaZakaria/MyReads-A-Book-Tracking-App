@@ -14,22 +14,12 @@ class AllBooks extends Component {
         const currentlyReading = Books.filter(b => b.shelf === "currentlyReading");
         const WantToRead = Books.filter(b => b.shelf === "wantToRead");
         const Read = Books.filter(b => b.shelf === "read");
-        return ( <
-            div className = "list-books-content" >
-            <
-            BookStatus Books = { currentlyReading }
-            ChangingStatus = { ChangingStatus }
-            title = { "currentlyReading" }
-            /> <
-            BookStatus Books = { WantToRead }
-            ChangingStatus = { ChangingStatus }
-            title = { "wantToRead" }
-            /> <
-            BookStatus Books = { Read }
-            ChangingStatus = { ChangingStatus }
-            title = { "read" }
-            />  <
-            /div>
+        return ( 
+            <div className = "list-books-content" >
+            <BookStatus Books = { currentlyReading }ChangingStatus = { ChangingStatus }title = { "currentlyReading" }/>
+            <BookStatus Books = { WantToRead }ChangingStatus = { ChangingStatus }title = { "wantToRead" }/> 
+            <BookStatus Books = { Read }ChangingStatus = { ChangingStatus }title = { "read" }/> 
+            </div >
         );
     }
 }
